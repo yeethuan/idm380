@@ -9,34 +9,85 @@
 </head>
 
 <header>
-  <nav aria-label="topnav" id="myTopnav">
-    <a href="/" class="logo">OLLY</a>
+  <nav aria-label="sidepanelnav" id="mySidepanel" class="sidepanel">
     <ul>
-      <li><a href="/collections/olly-wellness">OLLY Wellness</a></li>
-      <li><a href="/collections/olly-body">OLLY Body</a></li>
-      <li><a href="/pages/rewards">Rewards</a></li>
-      <li><a href="/blogs/the-well">Our Blog</a></li>
-      <li><a href="/pages/mental-health-awareness-month" aria-current="page">Mental Health</a></li>
+      <li><a href="javascript:void(0);" class="closebtn" onclick="toggleNav()">&times;</a></li>
+      <li><a href="/collections/olly-wellness">SUPPLEMENTS</a></li>
+      <li><a href="/collections/olly-body">OLLY BODY</a></li>
+      <li><a href="/pages/rewards">REWARDS</a></li>
+      <li><a href="/blogs/the-well">BLOG</a></li>
+      <li><a href="/pages/mental-health-awareness-month" aria-current="page">MISSION</a></li>
     </ul>
+  </nav>
+    
+    
+    <nav aria-label="topnav" id="myTopnav">
+    <a href="index.html" class="logo">
+        <img src="media/olly-logo.webp" alt="Logo">
+    </a>
+    <ul>
+      <li><a href="/collections/olly-wellness">SUPPLEMENTS</a></li>
+      <li><a href="/collections/olly-body">OLLY BODY</a></li>
+      <li><a href="/pages/rewards">REWARDS</a></li>
+      <li><a href="/blogs/the-well">BLOG</a></li>
+      <li><a href="/pages/mental-health-awareness-month" aria-current="page">MISSION</a></li>
+      <li><a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+          <i class="fa fa-bars"></i>
+        </a></li>
+    </ul>
+
+    <!-- side panel js start -->
+        <script>
+            function openNav() {
+                document.getElementById("mySidepanel").style.width = "250px";
+            }
+    
+            function closeNav() {
+                document.getElementById("mySidepanel").style.width = "0";
+            }
+    
+            function toggleNav() {
+                var sidepanel = document.getElementById("mySidepanel");
+                var topnav = document.getElementById("myTopnav");
+    
+                if (sidepanel.style.width === "250px") {
+                    sidepanel.style.width = "0";
+                    topnav.style.display = "flex";
+                } else {
+                    sidepanel.style.width = "250px";
+                    topnav.style.display = "none";
+                }
+            }
+        </script>
+    <!-- side panel js end -->
   </nav>
 </header>
 
 <main id="MainContent">
-  <section aria-labelledby="hero-heading">
-    <h1 id="hero-heading">Mental Health Awareness Month</h1>
-    <p>
-      We’ve made it our mission to champion better wellbeing, for all.
-      Equally important: taking the stigma out of seeking mental health support.
-    </p>
-  </section>
+    <section aria-labelledby="hero-heading" id="hero">
+        <div class="hero-media">
+            <img
+            src="media/mental-health-logo.svg"
+            alt="Mental Health Awareness Month logo"
+            />
+        </div>
 
-  <section aria-labelledby="commitment-heading">
-    <h2 id="commitment-heading">What’s Next?</h2>
+        <div class="hero-content">
+            <h1 id="hero-heading">Mental Health Awareness Month</h1>
+            <p>
+            We’ve made it our mission to champion better wellbeing, for all.
+            Equally important: taking the stigma out of seeking mental health support.
+            </p>
+        </div>
+    </section>
 
-    <p>
-      OLLY has committed to making <strong>$1.5M in grants</strong>
-      over the next three years.
-    </p>
+  <section aria-labelledby="commitment-heading" id="commitment">
+    <div class="commitment-content">
+        <h2 id="commitment-heading">The Core Issue</h2>
+        <p>
+        Mental health is something we all experience, just like physical health. The problem? It's stigmatized in our culture—and <strong>stigma prevents support</strong>.
+        </p>
+    </div>
 
     <ul>
       <li>
