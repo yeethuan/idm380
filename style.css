@@ -15,15 +15,15 @@
 
 @font-face {
     font-family:"Montserrat";
-    src: url(fonts/Montserrat-SemiBold.ttf) format('truetype');
-    font-weight: 300;
+    src: url(fonts/Montserrat-Bold.ttf) format('truetype');
+    font-weight: 700;
     font-style: normal;
   }
 
 @font-face {
     font-family:"Montserrat";
-    src: url(fonts/Montserrat-ExtraBold.ttf) format('truetype');
-    font-weight: 700;
+    src: url(fonts/Montserrat-Medium.ttf) format('truetype');
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -147,10 +147,9 @@ a:focus:not(:focus-visible) {
 
 
 main {
-  max-width: 65ch;               /* readable line length */
+  /* max-width: 65ch; */
   margin: 0 auto;
   text-align: left;              /* avoid centered body text */
-  margin-top: 3rem;
 }
 
 #hero {
@@ -168,15 +167,118 @@ main {
 }
 
 
+
 #commitment{
     display: grid;
-    grid-template-columns: minmax(1fr, 1fr) 2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    background-color: #ffffff;
+    color:#AF1685;
+    padding: 2rem 2rem;
+    border-radius: 1rem;
+    max-width:80%;
+    justify-self: center;
+}
+
+#commitment h3{
+    color: #EC5745;
+}
+
+#actions-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:2rem;
+    max-width: 80%;
+    justify-self: center;
+}
+
+#our-actions h2{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#actioncard {
     background-color: #ffffff;
     color:#AF1685;
     padding: 1rem 1.5rem;
     border-radius: 1rem;
 }
+
+#actioncard h3{
+    color: #EC5745;
+    font-weight: 700;
+    font-family:"Montserrat";
+}
+
+#actioncard h4{
+    color: #EC5745;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+#actioncard ul{
+    color: #4a5568;
+    font-size: 1rem;
+    padding-left:1rem;
+}
+
+#actioncard img{
+    display: flex;
+    justify-self: center;
+    height: 5rem;
+}
+
+#whats-next-content{
+    background-color: #ffffff;
+    justify-self: center;
+    max-width: 80%;
+    padding: 2rem 4rem;
+    border-radius: 1rem;
+}
+
+#whats-next h2{
+    margin-top: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color:#ffffff;
+}
+
+#whats-next-content h3{
+    color:#EC5745;
+    text-align: center;
+}
+
+#whats-next-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 6rem;
+  max-width: 100%;
+  margin-top: 2rem;
+  text-align: left;
+  background-color: #8E0067;
+}
+
+footer ul{
+    text-decoration: none;
+    list-style: none;
+}   
+
+footer a{
+    color:#ffffff;
+}
+
+footer a :hover{
+    color:#EC5745;
+}
+
+
 
 /* Typography Start*/
 h1 {
@@ -186,27 +288,40 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.8rem);
+  font-size: clamp(1.4rem, 1.5rem + 0.8vw, 1.8rem);
   line-height: 1.3;
   margin-bottom: 0.75rem;
 }
 
+h3 {
+    font-size: clamp(1.2rem, 1rem + 0.5vw, 1.5rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: clamp(1rem, 0.9rem + 0.3vw, 1.25rem);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
 p {
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-  line-height: 1.6;
-  margin-bottom: 1.25rem;
+  line-height: 1.5;
+  /* margin-bottom: 1rem; */
   color: #4a5568; 
 }
 
 
 ul {
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0;
+  /* list-style: none; */
+  /* padding: 0; */
+  /* margin: 2rem 0; */
+  margin-top: 0rem;
 }
 
 li {
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 strong {
@@ -270,42 +385,42 @@ img {
 
 
 /* Responsive Nav CSS Start*/
-@media screen and (max-width: 1000px) {
-
-  /* Hide links visually, NOT from assistive tech */
-  .nav-links a {
-    position: absolute;
-    left: -9999px;
-  }
-
-  /* Hamburger icon */
-  .nav-links .icon {
-    position: static;
-    left: auto;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 48px;
-    min-height: 48px; /* WCAG touch target */
-    cursor: pointer;
-  }
-
-  /* Expanded state */
-  .topnav.responsive .nav-links a {
-    position: static;
-    display: block;
-    padding: 1rem;
-    text-align: left;
-  }
+/* ===== Topnav ===== */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #0b2a4a;
 }
 
-/* =========================================================
-   Hamburger Icon Accessibility
-   ========================================================= */
+.topnav .logo img {
+  max-height: 48px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a:focus-visible {
+  outline: 3px solid #ff8c00;
+  outline-offset: 3px;
+}
+
+/* Hamburger */
 .icon {
+  display: none;
   background: none;
   border: none;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .icon:focus-visible {
@@ -313,9 +428,7 @@ img {
   outline-offset: 3px;
 }
 
-/* =========================================================
-   Side Panel (Accessible Off-Canvas Menu)
-   ========================================================= */
+/* ===== Sidepanel ===== */
 .sidepanel {
   height: 100%;
   width: 0;
@@ -323,38 +436,30 @@ img {
   z-index: 1000;
   top: 0;
   right: 0;
-  background-color: #0b2a4a; /* ensure contrast */
+  background-color: #0b2a4a;
   overflow-x: hidden;
   padding-top: 3.75rem;
   transition: width 0.4s ease;
 }
 
-/* Expanded state (via JS or aria-expanded) */
 .sidepanel[aria-hidden="false"] {
   width: 280px;
 }
 
-/* =========================================================
-   Sidepanel Links
-   ========================================================= */
 .sidepanel a {
   display: block;
   padding: 1rem 1.25rem;
   font-size: 1.125rem;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 
 .sidepanel a:hover,
 .sidepanel a:focus-visible {
   text-decoration: underline;
-  outline: none;
 }
 
-/* =========================================================
-   Close Button
-   ========================================================= */
-.sidepanel .closebtn {
+.closebtn {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -366,23 +471,34 @@ img {
   justify-content: center;
 }
 
-.sidepanel .closebtn:focus-visible {
+.closebtn:focus-visible {
   outline: 3px solid #ff8c00;
   outline-offset: 3px;
 }
 
-/* =========================================================
-   Reduced Motion Support
-   ========================================================= */
+/* ===== Responsive ===== */
+@media screen and (max-width: 1000px) {
+  .nav-links {
+    display: none;
+  }
+
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    min-height: 48px;
+  }
+}
+
+/* ===== Reduced Motion ===== */
 @media (prefers-reduced-motion: reduce) {
   .sidepanel {
     transition: none;
   }
 }
 
-/* =========================================================
-   Small Height Screens
-   ========================================================= */
+/* ===== Small height screens ===== */
 @media screen and (max-height: 450px) {
   .sidepanel {
     padding-top: 1rem;
@@ -392,3 +508,13 @@ img {
     font-size: 1rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
