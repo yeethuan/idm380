@@ -1,1 +1,182 @@
-style.css
+  :root {
+    --color-accent: #c4cdd5;
+    --color-body-text: #161d25;
+    --color-main-background: #fff;
+    --color-border: #849bb6;
+
+    --font-heading: Helvetica, Arial, sans-serif;
+    --font-body: Helvetica, Arial, sans-serif;
+    --font-body-weight: 400;
+    --font-body-style: normal;
+    --font-body-bold-weight: 700;
+  }
+  
+
+
+@font-face {
+    font-family:"Montserrat";
+    src: url(fonts/Montserrat-SemiBold.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family:"Montserrat";
+    src: url(fonts/Montserrat-ExtraBold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+/* =========================================================
+   Base Typography & Readability
+   ========================================================= */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  line-height: 1.6;
+  color: #ffffff;
+  background-color: #AF1685;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   Skip Navigation Link
+   ========================================================= */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  color: #161d25;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #ff8c00;
+}
+
+/* =========================================================
+   Top Navigation Layout
+   ========================================================= */
+#myTopnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  max-width: 100ch;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+/* Logo */
+#myTopnav .logo {
+  font-size: clamp(1.125rem, 1.05rem + 0.4vw, 1.35rem);
+  font-weight: 700;
+  text-decoration: none;
+  color: #161d25;
+}
+
+/* Navigation List */
+#myTopnav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   Links & States
+   ========================================================= */
+#myTopnav a {
+  font-size: clamp(0.875rem, 0.83rem + 0.2vw, 0.95rem);
+  color: #005fcc; /* WCAG AA on white */
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Hover & Focus (not color-only) */
+#myTopnav a:hover,
+#myTopnav a:focus-visible {
+  text-decoration: underline;
+  color: #003a8f;
+}
+
+/* Current Page Indicator */
+#myTopnav a[aria-current="page"] {
+  font-weight: 600;
+  border-bottom: 3px solid currentColor;
+}
+
+/* =========================================================
+   Keyboard Navigation & Focus Visibility
+   ========================================================= */
+a:focus-visible {
+  outline: 3px solid #ff8c00;
+  outline-offset: 3px;
+}
+
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* =========================================================
+   Screen Reader Enhancements
+   ========================================================= */
+/* Ensure current page is announced even if color is missed */
+#myTopnav a[aria-current="page"]::after {
+  content: " (current page)";
+  position: absolute;
+  left: -9999px;
+}
+
+/* =========================================================
+   Responsive Layout & Typography
+   ========================================================= */
+@media (max-width: 48rem) {
+  #myTopnav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  #myTopnav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+/* =========================================================
+   Respect User Preferences
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  #myTopnav a {
+    color: #0000ee;
+  }
+
+  #myTopnav a:hover,
+  #myTopnav a:focus-visible {
+    color: #00008b;
+  }
+
+  a:focus-visible {
+    outline-color: #000000;
+  }
+}
