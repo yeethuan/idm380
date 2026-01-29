@@ -33,7 +33,7 @@
    Base Typography & Readability
    ========================================================= */
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Montserrat",Helvetica, Arial, sans-serif;
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
   line-height: 1.6;
   color: #ffffff;
@@ -72,7 +72,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.5rem;
-  max-width: 100ch;
+  max-width: 100%;
   margin: 0 auto;
   text-align: left;
   background-color: #ffffff;
@@ -100,17 +100,16 @@ body {
    ========================================================= */
 #myTopnav a {
   font-size: clamp(0.875rem, 0.83rem + 0.2vw, 0.95rem);
-  color: #005fcc; /* WCAG AA on white */
+  color: #3a3a3a;
   text-decoration: none;
   padding: 0.5rem;
-  border-radius: 4px;
 }
 
 /* Hover & Focus (not color-only) */
 #myTopnav a:hover,
 #myTopnav a:focus-visible {
   text-decoration: underline;
-  color: #003a8f;
+  color: #AF1685;
 }
 
 /* Current Page Indicator */
