@@ -167,6 +167,14 @@ main {
     color:#ffffff
 }
 
+figcaption {
+  font-size: 0.6em; /* Adjusts the text size relative to the parent font size */
+  color: #ffffff;      /* Changes the text color to a dark gray */
+  text-align: center; /* Centers the caption text */
+  margin-top: .7rem;
+  padding: 10px 0; /* Adds spacing above and below the caption */
+}
+
 
 
 #commitment{
