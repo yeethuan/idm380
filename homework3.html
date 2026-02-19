@@ -18,12 +18,12 @@
                 <img src="media/olly-logo.webp" alt="Olly">
             </a>
 
-            <ul class="nav-links">
-                <li><a href="#void">Supplements</a></li>
-                <li><a href="#void">Physical</a></li>
-                <li><a href="#void">Rewards</a></li>
-                <li><a href="#void">Blog</a></li>
-                <li><a href="/pages/mental-health-awareness-month" aria-current="page">Mission</a></li>
+            <ul class="nav-links" aria-label="nav-links">
+                <li aria-label="nav-link1"><a href="#void">Supplements</a></li>
+                <li aria-label="nav-link2"><a href="#void">Physical</a></li>
+                <li aria-label="nav-link3"><a href="#void">Rewards</a></li>
+                <li aria-label="nav-link4"><a href="#void">Blog</a></li>
+                <li aria-label="nav-link5"><a href="/pages/mental-health-awareness-month" aria-current="page">Mission</a></li>
             </ul>
         </nav>
     </header>
@@ -80,10 +80,10 @@
                     <h3>Walking the Talk</h3>
                     <p>We're committed to transforming our culture to radically center around mental wellness.</p>
                     <h4>How we're doing this:</h4>
-                    <ul>
-                        <li>Every last Friday of the month is a <strong>Mental Health Day</strong></li>
-                        <li>Ongoing training for managers and leaders</li>
-                        <li>Respect flexible work schedules</li>
+                    <ul aria-label="ouractions-list">
+                        <li aria-label="ouractions-list1">Every last Friday of the month is a <strong>Mental Health Day</strong></li>
+                        <li aria-label="ouractions-list2">Ongoing training for managers and leaders</li>
+                        <li aria-label="ouractions-list3">Respect flexible work schedules</li>
                     </ul>
                 </article>
                 <article aria-labelledby="our-actions-card" id="actioncard">
@@ -126,26 +126,36 @@
         </section>
     </main>
 
-<a href="#MainContent" class="skip-link">Skip footer links</a>
 
-<footer>
+  <a href="#MainContent" class="skip-link">Skip footer links</a>
+
+
+    <footer>
   <nav aria-label="Footer-navigation">
-    <ul>
-      <li><a href="#void">Contact</a></li>
-      <li><a href="#void">Store Locator</a></li>
-      <li><a href="#void">Careers</a></li>
-      <li><a href="#void">Help Center</a></li>
+    <ul aria-label="nav-links">
+      <li aria-label="nav-link1"><a href="#void">Contact</a></li>
+      <li aria-label="nav-link2"><a href="#void">Store Locator</a></li>
+      <li aria-label="nav-link3"><a href="#void">Careers</a></li>
+      <li aria-label="nav-link4"><a href="#void">Help Center</a></li>
     </ul>
   </nav>
 
   <nav aria-label="Social-links">
-    <ul>
-      <li><a href="#void">Instagram</a></li>
-      <li><a href="#void">Facebook</a></li>
-      <li><a href="#void">Certified B Corp</a></li>
+    <ul aria-label="social-links">
+      <li aria-label="social-link1"><a href="#void">Instagram</a></li>
+      <li aria-label="social-link2"><a href="#void">Facebook</a></li>
+      <li aria-label="social-link3"><a href="#void">Certified B Corp</a></li>
     </ul>
   </nav>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <a href="#MainContent" class="skip-link">Skip footer links</a>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
 </footer>
+
 </body>
 
 </html>
