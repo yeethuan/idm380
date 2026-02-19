@@ -106,7 +106,7 @@ strong {
 /* =========================================================
    Skip Navigation Link
    ========================================================= */
-.skip-link {
+/* .skip-link {
   position: absolute;
   top: -10rem;
   left: 0;
@@ -115,7 +115,24 @@ strong {
   color: #161d25;
   z-index: 1000;
   text-decoration: none;
-}
+} */
+
+
+   .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--color-body-text);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      border-radius: 10px;
+      text-decoration: none;
+      z-index: 100;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 0; }
+
 
 .skip-link:focus {
   top: 0;
@@ -200,40 +217,10 @@ a:focus:not(:focus-visible) {
 }
 
 
-
 main {
   margin: 0 auto;
   text-align: left;
 }
-
-#hero {
-  display: grid;
-  grid-template-columns: minmax(200px, 1fr) 2fr;
-  gap: 2rem;
-  align-items: center;
-  max-width: 65ch;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
-}
-
-#hero p{
-    color:#ffffff
-}
-
-figcaption {
-  font-size: 0.6em; /* Adjusts the text size relative to the parent font size */
-  color: #ffffff;      /* Changes the text color to a dark gray */
-  text-align: center; /* Centers the caption text */
-  margin-top: .7rem;
-  padding: 10px 0; /* Adds spacing above and below the caption */
-}
-
-
-
-
-
-
-
 
 
 /* =========================================================
@@ -241,66 +228,262 @@ figcaption {
    ========================================================= */
 
 form{
-  max-width:400px;
+  max-width:600px;
 	width:100%;
-	margin:0 auto;
+  margin-top: 2rem;
+	margin-left:auto;
+  margin-right: auto;
 	position:relative;
   padding-top: 2rem;
-}
-
-
-fieldset{
-  display:flex-wrap;
-  padding: 1rem;
-  border-color:#AF1685;
-}
-
-input {
-  width:100%;
-  height:2.5rem;
-  border-radius: 10px;
-  padding: 1rem;
-}
-
-.form-control{
-  width:100%;
-  min-height: 6rem;
-  border-radius: 10px;
-  padding: 1rem;
-
+  background: #ffffff;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 
 }
 
-#contact input[type="text"]:hover, 
-#contact input[type="email"]:hover, 
-#contact input[type="tel"]:hover, 
-#contact input[type="form-control"]:hover, 
-#contact textarea:hover {
-	-webkit-transition:border-color 0.3s ease-in-out;
-	-moz-transition:border-color 0.3s ease-in-out;
-	transition:border-color 0.3s ease-in-out;
-	border:1px solid #ffffff;
-}
 
-fieldset {
-	border: 1px #AF1685;
-	margin: 0 0 2rem;
-	min-width: 100%;
-	padding: 0;
-	width: 100%;
-}
 
-fieldset.action {
-  display:grid;
-  grid-template-columns: 1fr;
-}
+/* Skip link — visible on focus for keyboard users */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: #fff;
+      color: #AF1685;
+      padding: 0.5rem 1rem;
+      font-size: 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      z-index: 100;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* Visually hidden utility — hides visually but keeps in AT tree */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Fieldset & Legend ────────────────────────────────── */
+    fieldset {
+      border: 1px #AF1685;
+      padding: 0px;
+    }
+
+    fieldset.info > legend {
+      margin-bottom: 0.25rem;
+      width: 100%;
+    }
+
+    fieldset.info > legend h1 {
+      font-size: 2rem;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .field-layout{
+      margin: 1rem;
+    }
+
+    .required-note {
+      font-size: 0.8rem;
+      color: #8E0067;
+      margin-bottom: 1.5rem;
+    }
+
+    .req-star {
+      color: #8E0067;
+    }
+
+    /* ── Field layout ─────────────────────────────────────── */
+    /* .field { margin-bottom: 1.25rem; } */
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 100%;
+      margin-bottom: 1.25rem;
+    }
+
+    @media (max-width: 420px) {
+      .field-row { grid-template-columns: 1fr; }
+
+      .form {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+
+    label {
+      font-size: .85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8E0067;
+      margin-bottom: 0.4rem;
+    }
+
+    .hint {
+      font-size: 0.75rem;
+      color: #8E0067;
+      margin-top: 0.1rem;
+    }
+
+    /* ── Inputs & Textarea ────────────────────────────────── */
+    input[type="text"],
+    input[type="email"],
+    input[type="datetime-local"],
+    textarea {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: #3e3e3e;
+      background: #ffffff;
+      border: 2px solid #c76ec0;
+      border-radius: 5px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      cursor:text;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #ae709d;
+   }
+
+
+    input:focus-visible,
+    textarea:focus-visible {
+      border-color: #ffffff;
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      box-shadow: 0 0 0 4px rgba(233,3,133,0.2);
+    }
+
+    input:user-invalid,
+    textarea:user-invalid {
+      border-color: #ff4834;
+    }
+
+    input:user-invalid:focus-visible,
+    textarea:user-invalid:focus-visible {
+      outline-color: var(--error);
+      box-shadow: 0 0 0 4px rgba(233,3,133,0.2);
+    }
+
+    input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+      -webkit-text-fill-color: var(--ink);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    /* ── Actions fieldset ─────────────────────────────────── */
+    fieldset.action { margin-top: 1.75rem; }
+
+    /* Legend is visually hidden but announces "Form actions" to AT */
+    fieldset.action > legend {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    /* ── Buttons ──────────────────────────────────────────── */
+    input[type="submit"],
+    input[type="reset"] {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      text-transform: uppercase;
+      border-radius: 5px;
+      cursor: pointer;
+      min-height: 44px;
+      min-width: 44px;
+      transition: 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.1s;
+    }
+
+    input[type="submit"] {
+      flex: 1;
+      padding: 0.75rem 1.5rem;
+      color: #ffffff;
+      background: #AF1685;
+      border: 2px solid #AF1685;
+    }
+
+    input[type="submit"]:hover {
+      background: #572FA1;
+      color: #ffffff ;
+      border-color: #572FA1;
+    }
+
+    input[type="reset"] {
+      padding: 0.75rem 1.25rem;
+      color: #AF1685;
+      background: transparent;
+      border: 2px solid #AF1685;
+    }
+
+    input[type="reset"]:hover {
+      color: #ffffff;
+      background: #C12D1C;
+      border: 2px solid #ffff;
+    }
+
+    /* ── Live status region ───────────────────────────────── */
+    #form-status {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      min-height: 1.4em;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
 /* =========================================================
    Style of the contact form END
    ========================================================= */
 
 
+button.skip-backtotop{
+  background-color: #;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
 
+.button a{
+  text-decoration: none;
 
+}
+
+.button a :hover{
+    text-decoration: none;
+
+}
 
 /* footer start */
 footer{
@@ -361,11 +544,13 @@ img {
 /* =========================================================
    Respect User Preferences
    ========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-  }
-}
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
 
 @media (prefers-contrast: more) {
   #myTopnav a {
