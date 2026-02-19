@@ -463,9 +463,12 @@ form{
    Style of the contact form END
    ========================================================= */
 
+.skip-to-top{
+  text-align: center;
+}
 
 button.skip-backtotop{
-  background-color: #;
+  background-color:#8E0067;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -475,15 +478,17 @@ button.skip-backtotop{
   cursor: pointer;
 }
 
-.button a{
+button.skip-backtotop :hover{
+    transition-delay: 10ms;
+    background-color:#ae709d;
+}
+
+button.skip-backtotop a{
   text-decoration: none;
+  color:#fff;
 
 }
 
-.button a :hover{
-    text-decoration: none;
-
-}
 
 /* footer start */
 footer{

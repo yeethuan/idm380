@@ -12,7 +12,7 @@
 
     <a href="#MainContent" class="skip-link">Skip to main content</a>
 
-    <header>
+    <header id="header">
         <nav aria-label="Main Navigation" id="myTopnav">
             <a href="homework4.html" class="logo">
                 <img src="media/olly-logo.webp" alt="Olly">
@@ -30,70 +30,47 @@
     </header>
 
     <main id="MainContent" tabindex="-1">
-        <!-- <form id="contact" action="homework4.html" method="post">
-            <fieldset class="info">
-                <legend> <h1>Contact Us!</h1></legend>
-                    <label for="fname">First name:</label> <span aria-label="required">*</span> <br>
-                        <input type="text" id="fname" name="fname" placeholder="First Name" required aria-required="true"> <br>
-                    <label for="lname">Last name:</label><br>
-                        <input type="text" id="lname" name="lname" placeholder="Last Name"><br>
-                    <label for="email">Email:</label> <span aria-label="required">*</span> <br>
-                        <input type="email" id="email" name="email" placeholder="123abc@gmail.com" required aria-required="true"><br>
-                    <label for="birthdaytime">Birthday:</label>
-                        <input type="datetime-local" id="birthdaytime" name="birthdaytime">
-                    <label for="form-control form-group">Message:</label><br>
-                        <textarea class="form-control form-group" placeholder="Message"></textarea>                
-            </fieldset>
-            <fieldset class="action">
-                <input type="submit" id="contact-submit" data-submit="...Sending">
-                <input type="reset" value="Reset">
-                <p class="required-note"><span>*</span> Required fields</p>
-
-            </fieldset>
-        </form> -->
-
-
-        <form id="contact" action="homework4.html" method="post" aria-describedby="form-desc">
+        <form id="contact" action="homework4.html" method="post" aria-describedby="form-description">
             <fieldset class="field-layout">
             <fieldset class="field-row" aria-labelledby="full-name">
                 <legend class="sr-only">Full name</legend>
-                <fieldset>
+                <fieldset aria-labelledby="first-name">
                     <label for="fname">First name <span class="req-star" aria-hidden="true">*</span></label>
                     <input type="text" id="fname" name="fname" placeholder="Jane" autocomplete="given-name" required aria-required="true"
                         aria-describedby="fname-hint">
                     <span class="hint" id="fname-hint">Your preferred alias.</span>
                 </fieldset>
 
-                <fieldset>
+                <fieldset aria-labelledby="last-name">
                     <label for="lname">Last name</label>
                     <input type="text" id="lname" name="lname" placeholder="Smith" autocomplete="family-name">
                 </fieldset>
             </fieldset>
 
 
-            <fieldset>
+            <fieldset aria-labelledby="email">
                 <label for="email" aria-labelledby="email"> Email address <span class="req-star" aria-hidden="true">*</span></label>
                 <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" inputmode="email" required aria-required="true" aria-describedby="email-hint">     
             </fieldset>
 
 
-            <fieldset>
+            <fieldset aria-labelledby="birthday">
                 <label for="birthdaytime">Birthday</label>
                 <input type="datetime-local" id="birthdaytime" name="birthdaytime" autocomplete="bday" aria-describedby="bday-hint">
             </fieldset>
             
             <fieldset> 
-                <label for="message">Message</label>
+                <label for="message" aria-labelledby="your-message">Message</label>
                 <textarea id="message" name="message" placeholder="How can we help you?" rows="5" aria-describedby="message-hint"></textarea>
                 <span class="hint" id="message-hint">Maximum 1000 characters.</span>
             </fieldset>
 
 
-      <fieldset class="action">
+      <fieldset class="action" aria-labelledby="form-actions">
             <legend>Form actions</legend>
-            <fieldset class="actions">
-            <input type="submit" id="contact-submit" value="Send Message" aria-describedby="form-status">
-            <input type="reset" value="Clear form" aria-label="Clear all fields and start over">
+            <fieldset class="actions" aria-labelledby="form-buttons">
+                <input type="submit" id="contact-submit" value="Send Message" aria-describedby="form-status">
+                <input type="reset" value="Clear form" aria-label="Clear all fields and start over">
             </fieldset>
       </fieldset>
       <p id="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
@@ -103,30 +80,32 @@
     </main>
 
 
-    <button class="skip-backtotop">
-        <a href="#contact" class="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'});">
-        Back to top
-        <span aria-hidden="true">↑</span> </a>
-    </button>
+    <section class="skip-to-top" aria-labelledby="skip-to-top">
+        <button class="skip-backtotop" aria-labelledby="skip-to-top">
+            <a href="#header" class="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'});">
+            Back to top
+            <span aria-hidden="true">↑</span> </a>
+        </button>
+    </section>
 
 
     <footer>
-  <nav aria-label="Footer-navigation">
-    <ul aria-label="nav-links">
-      <li aria-label="nav-link1"><a href="homework4.html">Contact</a></li>
-      <li aria-label="nav-link2"><a href="#void">Store Locator</a></li>
-      <li aria-label="nav-link3"><a href="#void">Careers</a></li>
-      <li aria-label="nav-link4"><a href="#void">Help Center</a></li>
-    </ul>
-  </nav>
+        <nav aria-label="Footer-navigation">
+            <ul aria-label="nav-links">
+            <li aria-label="nav-link1"><a href="homework4.html">Contact</a></li>
+            <li aria-label="nav-link2"><a href="#void">Store Locator</a></li>
+            <li aria-label="nav-link3"><a href="#void">Careers</a></li>
+            <li aria-label="nav-link4"><a href="#void">Help Center</a></li>
+            </ul>
+        </nav>
 
-  <nav aria-label="Social-links">
-    <ul aria-label="social-links">
-      <li aria-label="social-link1"><a href="#void">Instagram</a></li>
-      <li aria-label="social-link2"><a href="#void">Facebook</a></li>
-      <li aria-label="social-link3"><a href="#void">Certified B Corp</a></li>
-    </ul>
-  </nav>
+        <nav aria-label="Social-links">
+            <ul aria-label="social-links">
+            <li aria-label="social-link1"><a href="#void">Instagram</a></li>
+            <li aria-label="social-link2"><a href="#void">Facebook</a></li>
+            <li aria-label="social-link3"><a href="#void">Certified B Corp</a></li>
+            </ul>
+        </nav>
 </footer>
 
 </body>
