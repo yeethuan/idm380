@@ -39,7 +39,8 @@ body {
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
   line-height: 1.6;
   color: #ffffff;
-  background-color: #AF1685;
+  /* background-color: linear-gradient(#8E0067, #572FA1); */
+  background-image: linear-gradient(45deg,#AF1685, #EC5745);
   margin:0px;
 }
 
