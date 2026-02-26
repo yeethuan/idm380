@@ -342,7 +342,7 @@ form{
     /* ── Inputs & Textarea ────────────────────────────────── */
     input[type="text"],
     input[type="email"],
-    input[type="datetime-local"],
+    input[type="date"],
     textarea {
       width: 100%;
       padding: 0.65rem 0.9rem;
@@ -364,9 +364,9 @@ form{
     input:focus-visible,
     textarea:focus-visible {
       border-color: #ffffff;
-      outline: 2px solid var(--accent);
+      outline: 2px solid #ff8c00;
       outline-offset: 2px;
-      box-shadow: 0 0 0 4px rgba(233,3,133,0.2);
+      box-shadow: 0 0 0 4px #ffb151;
     }
 
     input:user-invalid,

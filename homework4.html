@@ -29,7 +29,7 @@
     </header>
 
     <main id="MainContent" tabindex="-1">
-        <form id="contact" action="homework4.html" method="post" aria-describedby="form-description">
+        <form id="contact" onsubmit="return false;" aria-describedby="form-description">
             <fieldset class="field-layout">
             <fieldset class="field-row" aria-labelledby="full-name">
                 <legend class="sr-only">Full name</legend>
@@ -55,7 +55,7 @@
 
             <fieldset aria-labelledby="birthday">
                 <label for="birthdaytime">Birthday</label>
-                <input type="datetime-local" id="birthdaytime" name="birthdaytime" autocomplete="bday" aria-describedby="bday-hint">
+                <input type="date" id="birthday" name="birthday" autocomplete="bday" aria-describedby="bday-hint">
             </fieldset>
             
             <fieldset> 
@@ -80,11 +80,12 @@
 
 
     <section class="skip-to-top" aria-labelledby="skip-to-top">
-        <button class="skip-backtotop" aria-labelledby="skip-to-top" >
-            <a href="#skip-link" class="skip-back-to-top">
-            Back to top
-            <span aria-hidden="true">↑</span> </a>
-        </button>
+        <a href="#skip-link" class="skip-back-to-top" aria-labelledby="skip-to-top-link">
+            <button class="skip-backtotop" aria-labelledby="skip-to-top" >
+                Back to top
+                <span aria-hidden="true">↑</span>
+            </button>
+        </a>
     </section>
 
 
