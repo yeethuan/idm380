@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="style4.css"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Contact</title>
@@ -29,7 +31,8 @@
     </header>
 
     <main id="MainContent" tabindex="-1">
-        <form id="contact" onsubmit="return false;" aria-describedby="form-description">
+        <h4>Contact Us!</h4>
+        <form id="contact" action="homework4.html" method="post" aria-describedby="form-description">
             <fieldset class="field-layout">
             <fieldset class="field-row" aria-labelledby="full-name">
                 <legend class="sr-only">Full name</legend>
@@ -87,6 +90,20 @@
             </button>
         </a>
     </section>
+
+    <script>
+        $(document).ready(function() {
+            $('#contact').on('submit', function(e) {
+                e.preventDefault(); // stops the page from reloading
+
+                swal("Message Sent!", "Thanks for reaching out. We'll get back to you soon.", "success", {
+                    button: "Ok",
+                });
+
+            this.reset(); // optionally clear the form after submission
+            });
+        });
+    </script>
 
 
     <footer>
