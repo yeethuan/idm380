@@ -306,9 +306,9 @@ Mission Page Style START
     }
 
     #actioncard h4{
-        color: #EC5745;
+        color: #C12D1C;
         font-size: 1rem;
-        margin-bottom: 1rem;
+        text-align: left;
     }
 
     #actioncard ul{
@@ -363,6 +363,38 @@ Mission Page Style START
 /* =========================================================
 Mission Page Style END
 ========================================================= */
+
+
+
+/* =========================================================
+Rewards Page Style START
+========================================================= */
+    #rewards-hero {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 2fr;
+    gap: 2rem;
+    align-items: center;
+    max-width: 65ch;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    }
+
+    #rewards-hero p{
+        color:#ffffff
+    }
+
+
+
+
+
+
+
+
+/* =========================================================
+Rewards Page Style END
+========================================================= */
+
+
 
 
 
