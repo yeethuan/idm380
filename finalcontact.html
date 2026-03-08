@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.finalcontact.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+</head>
+
+
+<header id="header">
+    <a href="#MainContent" class="skip-navlink">Skip to main content</a>
+    <nav aria-label="Main Navigation" id="myTopnav">
+        <a href="#finalmission.html" class="logo">
+            <img src="media/olly-logo.webp" alt="Olly">
+        </a>
+
+        <ul class="nav-links" aria-label="nav-links">
+            <li aria-label="nav-link1"><a href="#finalmission.html">Mission</a></li>
+            <li aria-label="nav-link2"><a href="#finalrewards.html">Rewards</a></li>
+            <li aria-label="nav-link3"><a href="#finalcontact.html" aria-current="page">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <main id="MainContent" tabindex="-1">
+        <h4>Contact Us!</h4>
+        <form id="contact" action="finalcontact.html" method="post" aria-describedby="form-description">
+            <fieldset class="field-layout">
+                <fieldset class="field-row" aria-labelledby="full-name">
+                    <legend class="sr-only">Full name</legend>
+                    <fieldset aria-labelledby="first-name">
+                        <label for="fname">First name <span class="req-star" aria-hidden="true">*</span></label>
+                        <input type="text" id="fname" name="fname" placeholder="Jane" autocomplete="given-name" required aria-required="true"
+                            aria-describedby="fname-hint">
+                        <span class="hint" id="fname-hint">Your preferred alias.</span>
+                    </fieldset>
+
+                    <fieldset aria-labelledby="last-name">
+                        <label for="lname">Last name</label>
+                        <input type="text" id="lname" name="lname" placeholder="Smith" autocomplete="family-name">
+                    </fieldset>
+                </fieldset>
+
+
+                <fieldset aria-labelledby="email-address">
+                    <label for="email" aria-labelledby="email-address"> Email address <span class="req-star" aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" inputmode="email" required aria-required="true" aria-labelledby="email-address">     
+                </fieldset>
+
+
+                <fieldset aria-labelledby="birthday">
+                    <label for="birthdaytime" aria-labelledby="birthday">Birthday</label>
+                    <input type="date" id="birthday" name="birthday" min="1900-01-01" max="2016-01-01" autocomplete="bday" aria-describedby="bday-hint" >
+                </fieldset>
+                
+                <fieldset> 
+                    <label for="message" aria-labelledby="your-message">Message</label>
+                    <textarea id="message" name="message" placeholder="How can we help you?" maxlength="1500" rows="5" aria-describedby="message-hint"></textarea>
+                </fieldset>
+
+
+                <fieldset class="actions" aria-labelledby="form-buttons">
+                    <input type="submit" id="contact-submit" value="Send Message" aria-describedby="form-status">
+                    <input type="reset" value="Clear form" aria-label="Clear all fields and start over">
+                </fieldset>
+                <p id="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    
+            </fieldset> 
+        </form>
+    </main>
+
+
+    <footer>
+        <section class="social-links" aria-label="Social-links">
+            <ul aria-label="social-links">
+                <li aria-label="social-link1"><a href="#void">Instagram</a></li>
+                <li aria-label="social-link2"><a href="#void">Facebook</a></li>
+                <li aria-label="social-link3"><a href="#void">Certified B Corp</a></li>
+            </ul>
+        </section>
+        <a href="#header" class="skip-footerlink">Skip footer links</a>
+            <section aria-label="Footer-navigation">
+                <ul aria-label="nav-links">
+                    <li aria-label="nav-link1"><a href="#void">Contact</a></li>
+                    <li aria-label="nav-link2"><a href="#void">Store Locator</a></li>
+                    <li aria-label="nav-link3"><a href="#void">Careers</a></li>
+                    <li aria-label="nav-link4"><a href="#void">Help Center</a></li>
+                </ul>
+            </section>
+    </footer>
+</body>
+
+
+</html>
