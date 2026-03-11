@@ -40,7 +40,7 @@
     font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
     line-height: 1.6;
     color: #ffffff;
-    background-image: linear-gradient(45deg,#C12D1C, #AA0060);
+    background-image: linear-gradient(45deg,#ff4400, #AA0060);
     margin:0px;
     }
 
@@ -241,7 +241,7 @@ Mission Page Style START
 ========================================================= */
     #hero {
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) 2fr;
+    grid-template-columns: 1fr 2fr;
     gap: 2rem;
     align-items: center;
     max-width: 65ch;
@@ -300,13 +300,13 @@ Mission Page Style START
     }
 
     #actioncard h3{
-        color: #EC5745;
+        color: #AA0060;
         font-weight: 700;
         font-family:"Montserrat";
     }
 
     #actioncard h4{
-        color: #C12D1C;
+        color: #AA0060;
         font-size: 1rem;
         text-align: left;
     }
@@ -339,7 +339,7 @@ Mission Page Style START
     }
 
     #whats-next-content h3{
-        color:#EC5745;
+        color:#AA0060;
         text-align: center;
     }
 
@@ -369,30 +369,32 @@ Mission Page Style END
 /* =========================================================
 Rewards Page Style START
 ========================================================= */
-    #reward-hero-grid {
+
+    /* hero styling START-----------------------------------*/
+    #reward-hero-section {
     display: grid;
-    grid-template-columns: 4fr 3fr;
+    grid-template-columns: 1fr 2fr;
     gap: 2rem;
     align-items: center;
-    padding: 2rem 2rem;
+    padding: 3rem 10rem 3rem 10rem;
     border-radius: 1rem;
-    max-width:80%;
+    max-width:100%;
     justify-self: center;
+    background-image: linear-gradient(45deg,#C12D1C, #AF1685);
     }
 
-    #reward-hero-grid p{
+    #reward-hero-section p{
         color:#ffffff
     }
 
-
     .reward-button {
         padding: 0.75rem 1.5rem;
-        background: #AF1685;
-        border: 2px solid #AF1685;
+        background: #ffffff;
+        border: 2px solid #C12D1C;
         border-radius: 3rem;
-        color: #ffffff;
+        color: #AF1685;
         font-family: 'montserrat', Arial, Helvetica, sans-serif;
-        max-height: fit-content;
+        max-height: 3rem;
     }
 
     .reward-button a{
@@ -402,8 +404,8 @@ Rewards Page Style START
     }
 
     .reward-button:hover {
-        font-size: large;
-        transition: 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.1s;
+        font-size: 1.001rem;
+        transition: 600ms, color 600ms, box-shadow 0.2s, transform 600ms;
         cursor: pointer;
     }
 
@@ -414,12 +416,81 @@ Rewards Page Style START
         font-size: large;
         transition-duration: 600ms;
     }
+    /* hero styling END-----------------------------------*/
+
+    /* ways to earn points section styling START-----------------------------------*/
+    #earn-points-section{
+        background-color: #ffffff;
+    }
+
+    #earn-points-heading{
+        text-align: center;
+        margin-top: 0rem;
+        padding-top: 4rem;  
+        color:#AF1685;
+        background-color:#ffffff;
+      
+    }
+
+    #earn-points-heading h2{
+        text-align: center;
+        color:#AF1685
+    }
+    
+    #earn-points-grid h3{
+        color: #bd006b;
+        font-weight: 700;
+        font-family:"Montserrat";
+    }
+
+    #earn-points-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    align-items: top;
+    text-align: center;
+    padding: 3rem;
+    padding-top: 2rem;
+    max-width:100%;
+    justify-self: center;
+    background-color: #ffffff;
+    }    
 
 
+    #rewards-icon{
+        color:#EC5745;
+        font-size: 3rem;
+        text-align: center;
+        justify-content: center;
+    } 
 
 
+    /* how to use points styling START-----------------------------------*/
+    #use-points-section{
+        text-align: center;
+        color:#ffffff;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        display: block;
+        background-image: linear-gradient(45deg,#C12D1C, #AF1685);
+    }
+
+    #use-points-section p{
+        color:#ffffff;
+    }
+
+    #rewards-icon2{
+        color:#F69ACE;
+        font-size: 4rem;
+    }
 
 
+    #section {
+        padding-bottom: 0rem;
+    }
+
+
+    /* how to use points styling END-----------------------------------*/
 
 /* =========================================================
 Rewards Page Style END
@@ -735,6 +806,19 @@ Footer StylingEND
         min-height: 3rem;
         }
 
+        #reward-hero-section {
+            grid-template-columns: 1fr;
+            text-align: center;
+            padding: 3rem 1rem 1rem 1rem;
+            padding-top: 2rem;
+        }
+
+        #earn-points-grid {
+            grid-template-columns: 1fr 1fr;
+            gap:1rem;
+            padding: 3rem 3rem 3rem 3rem;
+        }
+
         footer {
         flex-direction: column;
         padding:1rem 1rem 2rem;
@@ -754,6 +838,58 @@ Footer StylingEND
         body{
             max-height:100%;
         }
+
+        #hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 1rem;
+        gap:1rem;
+        }
+
+        #hero img{
+        padding: 0px;
+        }
+
+        #hero-heading{
+        margin-top: 0rem;
+        }
+
+
+        #commitment{
+        grid-template-columns: 1fr;
+        }
+
+        #our-actions h2{
+        margin-top: 3rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        }
+
+        #actions-grid{
+        grid-template-columns: 1fr;
+        }
+
+        #whats-next h2{
+        margin-top: 3rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        }
+
+        #whats-next-grid{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        }
+
+        #whats-next-content{
+        padding: 2rem 2rem;
+        text-align: center;
+        }
+
+        #earn-points-grid {
+            grid-template-columns: 1fr;
+            gap:1rem;
+            padding: 1rem 3rem 3rem 3rem;
+        }
         
         .field-row { grid-template-columns: 1fr; }
 
@@ -765,6 +901,16 @@ Footer StylingEND
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        width: 100%;
+        }
+
+        input[type="submit"] {
+        display:block;
+        width: 100%;
+        }
+
+        input[type="reset"] {
+        display:block;
         width: 100%;
         }
         
