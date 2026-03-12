@@ -811,13 +811,9 @@ Footer StylingEND
         grid-template-columns: 1fr 2fr;
         padding-top: 1rem;
         gap:1rem;
+        justify-self: center;
         }
 
-        #hero-media{
-            text-align: center;
-            justify-content: center;
-            margin: 0px;
-        }
 
         #hero img{
         padding: 0px;
