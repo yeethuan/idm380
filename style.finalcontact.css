@@ -227,7 +227,7 @@ Top Navigation Layout START
     content: " (current page)";
     position: absolute;
     left: -9999px;
-}
+    }
 /* =========================================================
 Top Navigation Layout END
 ========================================================= */
@@ -329,6 +329,8 @@ Mission Page Style START
         max-width: 80%;
         padding: 2rem 4rem;
         border-radius: 1rem;
+        margin-bottom: 2rem;
+
     }
 
     #whats-next h2{
@@ -377,7 +379,6 @@ Rewards Page Style START
     gap: 2rem;
     align-items: center;
     padding: 3rem 10rem 3rem 10rem;
-    border-radius: 1rem;
     max-width:100%;
     justify-self: center;
     background-image: linear-gradient(45deg,#C12D1C, #AF1685);
@@ -480,7 +481,7 @@ Rewards Page Style START
     }
 
     #rewards-icon2{
-        color:#F69ACE;
+        color:#ffc2ef;
         font-size: 4rem;
     }
 
@@ -731,7 +732,7 @@ Footer Styling START
     padding: 1rem 6rem;
     max-width: 100%;
     max-height: 100%;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     text-align: left;
     background-color: #8E0067;
     color:#ffffff;
@@ -980,11 +981,267 @@ Footer StylingEND
 
         #myTopnav a:hover,
         #myTopnav a:focus-visible {
-            color: #00008b;
+            color: #000f71;
         }
 
         a:focus-visible {
             outline-color: #000000;
         }
     }
+
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-image: linear-gradient(45deg,#373737, #373737);
+            color: #ffffff;
+        }
+
+        #myTopnav {
+            background-color: #151515;
+        }
+
+        #myTopnav a {
+            color: #ffffff;
+        }
+
+        #myTopnav a:hover,
+        #myTopnav a:focus-visible {
+            color: #e187c9;
+        }
+
+        #myTopnav a[aria-current="page"] {
+        color: #e187c9;
+        border-bottom: 3px solid #e187c9;
+        }
+
+        .logo img{
+        filter: brightness(100);
+        }
+
+
+        /* MISSION DARK MODE START---------------- */
+        #hero h1{
+        color: #e187c9;
+        }
+
+        #commitment {
+        background-color: #151515;
+        color:#e187c9;
+        }
+
+        #commitment h3{
+        color:#f38579;
+        }
+
+        #commitment p{
+        color:#ffffff;
+        }
+
+        #actioncard {
+        background-color: #151515;
+        }
+
+        #our-actions h2{
+        color: #ffffff;
+        }
+
+        #actioncard h3{
+        color: #e187c9;
+        }
+
+        #actioncard h4{
+        color: #e187c9;
+        }
+
+        #actioncard p{
+        color: #ffffff;
+        }
+
+        #actioncard ul{
+        color: #ffffff;
+        }
+
+        #whats-next-content{
+        background-color: #151515;
+        }
+
+        #whats-next-card{
+        background-color: #151515;
+        }
+
+        #whats-next h2{
+        color:#ffffff;
+        }
+
+        #whats-next h3{
+        color:#e187c9;
+        }
+
+        #whats-next p{
+        color:#ffffff;
+        }
+
+
+
+            
+
+
+
+
+        /* REWARDS DARK MODE START---------------- */
+        #reward-hero-section {
+        background-image: linear-gradient(45deg,#323232, #323232);
+        }
+
+        .reward-button {
+        padding: 0.75rem 1.5rem;
+        background: #ffffff;
+        border: 2px solid #323232;
+        border-radius: 3rem;
+        color: #AF1685;
+        font-family: 'montserrat', Arial, Helvetica, sans-serif;
+        max-height: 3rem;
+        }
+
+        #earn-points-section{
+        background-color: #151515;
+        padding-bottom: 0px;  
+        }
+
+        #earn-points-heading{
+        background-color: #151515;
+        }
+
+        #earn-points-section h2{
+        background-color: #151515;
+        color:#C75CAA;
+        }
+
+        #earn-points-grid{
+        background-color: #151515;  
+        }
+
+        #earn-points-section h3{
+        color:#F69ACE;
+        }
+
+        #earn-points-section p{
+        color:#ffffff;
+        }
+        
+        #use-points-section{
+        background-image: linear-gradient(45deg,#323232, #323232);
+        }
+
+        #use-points-section h2{
+        color:#e187c9;
+        }
+
+        #rewards-icon2{
+        color:#e187c9;
+        }
+
+        /* REWARDS DARK MODE END---------------- */
+        
+        
+        /* CONTACT DARK MODE START---------------- */
+
+        form{
+        background: #373737;
+        margin-top: 0rem;
+        }
+
+        fieldset {
+        border: 1px #c7c7c7;
+        padding: 0px;
+        }
+
+        label {
+        color: #ffffff;
+        }
+
+        .hint {
+        color: #c7c7c7;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea {
+        color:#fff;
+        background: #373737;
+        border: 2px solid #929292;
+        }
+
+        .required-note {
+        color: #c7c7c7;
+        }
+
+        .req-star {
+        color: #c7c7c7;
+        }
+
+        input::placeholder, textarea::placeholder {
+        color: #898989;
+        }
+
+        input:user-invalid:focus-visible,
+        textarea:user-invalid:focus-visible {
+        outline-color: #ff0000;
+        box-shadow: 0 0 0 4px rgba(233, 3, 3, 0.2);
+        }
+
+        input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px #adadad inset;
+        -webkit-text-fill-color: var(--ink);
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+        background-color: #bbbbbb;
+        border-radius: .5rem;
+        }
+
+        input[type="submit"] {
+        color: #65004a;
+        background: #e187c9;
+        border: 2px solid #e187c9;
+        }
+
+        input[type="submit"]:hover {
+        background: #8E0067;
+        color: #ffffff ;
+        border-color: #8E0067;
+        font-size: smaller;
+        }
+
+        input[type="reset"] {
+        padding: 0.75rem 1.5rem;
+        color: #e187c9;
+        background: transparent;
+        border: 2px solid #e187c9;
+        }
+
+        input[type="reset"]:hover {
+            color: #ffffff;
+            background: #8E0067;
+            border: 2px solid #8E0067;
+            font-size: smaller;
+        }
+
+
+        footer {
+            background-color: #151515;
+            color: #ffffff;
+        }
+
+        footer a {
+            color: #ffffff;
+        }
+
+        footer a:hover,
+        footer a:focus-visible {
+            color: #e187c9;
+        }
+    }
+
+
 /* =================Respect User Preferences END =============*/
