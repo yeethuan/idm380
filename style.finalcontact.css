@@ -396,6 +396,8 @@ Rewards Page Style START
         color: #AF1685;
         font-family: 'montserrat', Arial, Helvetica, sans-serif;
         max-height: 3rem;
+        font-weight: 600;
+
     }
 
     .reward-button a{
@@ -1007,12 +1009,12 @@ Footer StylingEND
 
         #myTopnav a:hover,
         #myTopnav a:focus-visible {
-            color: #e187c9;
+            color: #fab8e9;
         }
 
         #myTopnav a[aria-current="page"] {
-        color: #e187c9;
-        border-bottom: 3px solid #e187c9;
+        color: #fab8e9;
+        border-bottom: 3px solid #fab8e9;
         }
 
         .logo img{
@@ -1022,16 +1024,16 @@ Footer StylingEND
 
         /* MISSION DARK MODE START---------------- */
         #hero h1{
-        color: #e187c9;
+        color: #fab8e9;
         }
 
         #commitment {
         background-color: #151515;
-        color:#e187c9;
+        color:#fab8e9;
         }
 
         #commitment h3{
-        color:#f38579;
+        color:#fab8e9;
         }
 
         #commitment p{
@@ -1047,11 +1049,11 @@ Footer StylingEND
         }
 
         #actioncard h3{
-        color: #e187c9;
+        color: #fab8e9;     
         }
 
         #actioncard h4{
-        color: #e187c9;
+        color: #fab8e9;
         }
 
         #actioncard p{
@@ -1075,7 +1077,7 @@ Footer StylingEND
         }
 
         #whats-next h3{
-        color:#e187c9;
+        color:#fab8e9;
         }
 
         #whats-next p{
@@ -1097,18 +1099,22 @@ Footer StylingEND
         }
 
         #reward-hero-section h1{
-        color: #e187c9;
+        color: #fab8e9;
         }
 
         .reward-button {
-        padding: 0.75rem 1.5rem;
         background: #ffffff;
         border: 2px solid #323232;
-        border-radius: 3rem;
-        color: #AF1685;
-        font-family: 'montserrat', Arial, Helvetica, sans-serif;
-        max-height: 3rem;
+        color: #A3147D;
+        font-weight: 600;
         }
+
+        #rewards-icon{
+        color:#ffb4ac;
+        font-size: 3rem;
+        text-align: center;
+        justify-content: center;
+        } 
 
         #earn-points-section{
         background-color: #151515;
@@ -1121,7 +1127,7 @@ Footer StylingEND
 
         #earn-points-section h2{
         background-color: #151515;
-        color:#C75CAA;
+        color:#ffffff;
         }
 
         #earn-points-grid{
@@ -1129,7 +1135,7 @@ Footer StylingEND
         }
 
         #earn-points-section h3{
-        color:#F69ACE;
+        color:#fab8e9;
         }
 
         #earn-points-section p{
@@ -1141,11 +1147,11 @@ Footer StylingEND
         }
 
         #use-points-section h2{
-        color:#e187c9;
+        color:#fab8e9;
         }
 
         #rewards-icon2{
-        color:#e187c9;
+        color:#ffb4ac;
         }
 
         /* REWARDS DARK MODE END---------------- */
@@ -1210,8 +1216,8 @@ Footer StylingEND
 
         input[type="submit"] {
         color: #65004a;
-        background: #e187c9;
-        border: 2px solid #e187c9;
+        background: #fab8e9;
+        border: 2px solid #fab8e9;
         }
 
         input[type="submit"]:hover {
@@ -1223,9 +1229,9 @@ Footer StylingEND
 
         input[type="reset"] {
         padding: 0.75rem 1.5rem;
-        color: #e187c9;
+        color: #fab8e9;
         background: transparent;
-        border: 2px solid #e187c9;
+        border: 2px solid #fab8e9;
         }
 
         input[type="reset"]:hover {
@@ -1247,7 +1253,7 @@ Footer StylingEND
 
         footer a:hover,
         footer a:focus-visible {
-            color: #e187c9;
+            color: #fab8e9;
         }
     }
 
