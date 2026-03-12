@@ -40,7 +40,7 @@
     font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
     line-height: 1.6;
     color: #ffffff;
-    background-image: linear-gradient(45deg,#ff4400, #AA0060);
+    background-image: linear-gradient(45deg,#b13b10, #8e006b);
     margin:0px;
     }
 
@@ -149,7 +149,7 @@ Skip Navigation Links START
         transition: top 0.2s;
     }
     .skip-footerlink:focus { 
-        top: 60%; 
+        top: 70%; 
         color: #8E0067;  
         outline: 3px solid #ff8c00;
 
@@ -211,15 +211,15 @@ Top Navigation Layout START
     #myTopnav a:hover,
     #myTopnav a:focus-visible {
     text-decoration: none;
-    color: #AF1685;
+    color: #8e006b;
     border-bottom: 3px solid currentColor;
     }
 
     /* Current Page Indicator */
     #myTopnav a[aria-current="page"] {
     font-weight: 600;
-    color: #AF1685;
-    border-bottom: 3px solid #AF1685;
+    color: #8e006b;
+    border-bottom: 3px solid #8e006b;
     }
 
     /* Ensure current page is announced even if color is missed */
@@ -268,7 +268,7 @@ Mission Page Style START
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
         background-color: #ffffff;
-        color:#AF1685;
+        color:#A3147D;
         padding: 2rem 2rem;
         border-radius: 1rem;
         max-width:80%;
@@ -276,7 +276,7 @@ Mission Page Style START
     }
 
     #commitment h3{
-        color: #EC5745;
+        color: #A72011;
     }
 
     #actions-grid{
@@ -437,11 +437,11 @@ Rewards Page Style START
 
     #earn-points-heading h2{
         text-align: center;
-        color:#AF1685
+        color:#A3147D;
     }
     
     #earn-points-grid h3{
-        color: #bd006b;
+        color: #760259;
         font-weight: 700;
         font-family:"Montserrat";
     }
@@ -461,7 +461,7 @@ Rewards Page Style START
 
 
     #rewards-icon{
-        color:#EC5745;
+        color:#760259;
         font-size: 3rem;
         text-align: center;
         justify-content: center;
