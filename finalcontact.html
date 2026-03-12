@@ -17,18 +17,18 @@
                 <img src="media/olly-logo.webp" alt="Olly" aria-describedby="Olly">
             </a>
             <ul class="nav-links" aria-label="nav-links">
-                <li aria-label="nav-link1"><a href="finalmission.html">Mission</a></li>
-                <li aria-label="nav-link2"><a href="finalreward.html">Rewards</a></li>
-                <li aria-label="nav-link3"><a href="finalcontact.html" aria-current="page">Contact</a></li>
+                    <li aria-label="navigate-to-mission"><a href="finalmission.html">Mission</a></li>
+                    <li aria-label="navigate-to-rewards"><a href="finalreward.html">Rewards</a></li>
+                <li aria-label="current-page-contact"><a href="finalcontact.html" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="MainContent" tabindex="-1">
         <h4>Contact Us!</h4>
-        <form id="contact" action="finalcontact.html" method="post" aria-describedby="form-description">
-            <fieldset class="field-layout">
-                <fieldset class="field-row" aria-labelledby="full-name">
+        <form id="contact" action="finalcontact.html" method="post" aria-label="contact-form">
+            <fieldset class="field-layout" aria-label="contact-form-content">
+                <fieldset class="field-row" aria-label="full-name-input">
                     <legend class="sr-only">Full name</legend>
                     <fieldset aria-labelledby="first-name">
                         <label for="fname">First name <span class="req-star" aria-hidden="true">*</span></label>
@@ -44,25 +44,25 @@
                 </fieldset>
 
 
-                <fieldset aria-labelledby="email-address">
+                <fieldset aria-label="email-address-input">
                     <label for="email" aria-labelledby="email-address"> Email address <span class="req-star" aria-hidden="true">*</span></label>
                     <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" inputmode="email" required aria-required="true" aria-labelledby="email-address">     
                 </fieldset>
 
 
-                <fieldset aria-labelledby="enter-birthday">
+                <fieldset aria-label="birthday-input">
                     <label for="birthdaytime" aria-labelledby="birthday">Birthday</label>
                     <input type="date" id="birthday" name="birthday" min="1900-01-01" max="2016-01-01" autocomplete="bday" aria-describedby="bday-hint" >
                 </fieldset>
                 
-                <fieldset aria-labelledby="send-us-a-message"> 
+                <fieldset aria-label="message-input"> 
                     <label for="message" aria-labelledby="your-message">Message</label>
                     <textarea id="message" name="message" placeholder="How can we help you?" maxlength="1500" rows="5" aria-describedby="message-hint"></textarea>
                 </fieldset>
 
 
-                <fieldset class="actions" aria-labelledby="form-buttons">
-                    <input type="submit" id="contact-submit" value="Send Message" aria-describedby="form-status">
+                <fieldset class="actions" aria-label="form-actions">
+                    <input type="submit" id="contact-submit" value="Send Message" aria-label="submit contact form">
                     <input type="reset" value="Clear form" aria-label="Clear all fields and start over">
                 </fieldset>
                 <p id="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
@@ -76,16 +76,16 @@
         <a href="#header" class="skip-footerlink">Skip footer links</a>
         <section class="social-links" aria-label="Social-links">
             <ul aria-label="social-links">
-                <li aria-label="social-link1"><a href="#void">Instagram</a></li>
-                <li aria-label="social-link2"><a href="#void">Facebook</a></li>
-                <li aria-label="social-link3"><a href="#void">Certified B Corp</a></li>
+                <li aria-label="link-Instagram"><a href="#void">Instagram</a></li>
+                <li aria-label="link-Facebook"><a href="#void">Facebook</a></li>
+                <li aria-label="link-Certified-B-Corp"><a href="#void">Certified B Corp</a></li>
             </ul>
         </section>
         <section aria-label="Footer-navigation">
             <ul aria-label="nav-links">
-                <li aria-label="nav-link1"><a href="finalmission.html">Mission</a></li>
-                <li aria-label="nav-link2"><a href="finalreward.html">Rewards</a></li>
-                <li aria-label="nav-link3"><a href="finalcontact.html">Contact</a></li>
+                <li aria-label="navigate-to-mission"><a href="finalmission.html">Mission</a></li>
+                <li aria-label="navigate-to-rewards"><a href="finalreward.html">Rewards</a></li>
+                <li aria-label="current-page-contact"><a href="finalcontact.html" aria-current="page">Contact</a></li>
             </ul>
         </section>
     </footer>
