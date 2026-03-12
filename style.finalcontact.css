@@ -1088,6 +1088,8 @@ Footer StylingEND
 
 
         /* REWARDS DARK MODE START---------------- */
+
+
         #reward-hero-section {
         background-image: linear-gradient(45deg,#323232, #323232);
         }
@@ -1146,7 +1148,7 @@ Footer StylingEND
         /* CONTACT DARK MODE START---------------- */
 
         form{
-        background: #373737;
+        background: #151515;
         margin-top: 0rem;
         }
 
