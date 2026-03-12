@@ -243,9 +243,9 @@ Mission Page Style START
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
-    align-items: center;
+    justify-self: center;
     max-width: 65ch;
-    margin: 0 auto;
+    margin: 0;
     padding: 3rem 1.5rem;
     }
 
@@ -876,6 +876,12 @@ Footer StylingEND
         text-align: center;
         padding-top: 1rem;
         gap:1rem;
+        }
+
+        #hero-media{
+            text-align: center;
+            justify-content: center;
+            margin: 0px;
         }
 
         #hero img{
