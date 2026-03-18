@@ -73,6 +73,14 @@
         </form>
     </main>
 
+    <script>
+        window.onbeforeunload = () => {
+        for(const form of document.getElementsByTagName('form')) {
+            form.reset();
+        }
+        }
+    </script>
+
 
     <footer>
         <a href="#header" class="skip-footerlink">Skip footer links</a>
