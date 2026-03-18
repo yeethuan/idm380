@@ -28,7 +28,7 @@
 
     <main id="MainContent" tabindex="-1">
         <h4>Contact Us!</h4>
-        <form id="contact" action="finalcontact.html" method="post" aria-label="contact-form">
+        <form id="contact" action="https://formspree.io/f/mwplyqzv" method="post" aria-label="contact-form">
             <fieldset class="field-layout" aria-label="contact-form-content">
                 <fieldset class="field-row" aria-label="full-name-input">
                     <legend class="sr-only">Full name</legend>
@@ -72,20 +72,6 @@
             </fieldset> 
         </form>
     </main>
-
-    <script>
-        $(document).ready(function() {
-            $('#contact').on('submit', function(e) {
-                e.preventDefault(); // stops the page from reloading
-
-                swal("Message Sent!", "Thanks for reaching out. We'll get back to you soon.", "success", {
-                    button: "Ok",
-                });
-
-            this.reset(); // optionally clear the form after submission
-            });
-        });
-    </script>
 
 
     <footer>
