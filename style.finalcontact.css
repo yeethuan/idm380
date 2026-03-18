@@ -820,7 +820,7 @@ Footer StylingEND
         #hero img{
         padding: 0px;
         text-align: center;
-        justify-content: center;
+        justify-self: center;
         }
 
         #actions-grid{
