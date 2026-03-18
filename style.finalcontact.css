@@ -810,10 +810,12 @@ Footer StylingEND
         }
 
         #hero {
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr;
         padding-top: 1rem;
         gap:1rem;
         justify-self: center;
+        max-width: 80%;
+        text-align: center;
         }
 
 
@@ -821,6 +823,10 @@ Footer StylingEND
         padding: 0px;
         text-align: center;
         justify-self: center;
+        }
+
+        #commitment{
+        grid-template-columns: 1fr;
         }
 
         #actions-grid{
